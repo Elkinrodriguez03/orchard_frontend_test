@@ -4,7 +4,7 @@ import '../App.css';
 
 const TasteColors: React.FC = () => {
   return (
-    <div>
+    <section>
       <div className='title'>
         <h1>TASTE THE COLOURS</h1>
         <hr />
@@ -29,7 +29,7 @@ const TasteColors: React.FC = () => {
           description="White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat."
         />
       </div>
-    </div>
+    </section>
   );
 };
 
