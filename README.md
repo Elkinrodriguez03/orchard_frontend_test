@@ -43,4 +43,4 @@ This repository contains the frontend implementation for a technical assessment,
 
 ## Deployment
 
-The application is deployed on Vercel. You can view the live application here: [Vercel deployment URL]
+The application is deployed on Vercel. You can view the live application here: https://orchard-frontend-test.vercel.app/
