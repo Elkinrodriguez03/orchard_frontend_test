@@ -1,42 +1,175 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 120px 147px;
+  font-family: "Open Sans", serif;
+  color: white;
+  background-color: #0e1414;
+  display: flex;
+  justify-content: center;
+}
+
+.up-section {
+  display: grid;
+  grid-template-columns: 744px 362px;
+  gap: 30px;
+  margin-bottom: 240px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.item-1 {
+  grid-row: 1 / 3;
+}
+
+.item-2 {
+  height: 295px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.text-content h3 {
+  color: #cf1430;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 21px;
+  font-weight: lighter;
+}
+
+.text-content p:last-child {
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin: 30px 0 30px;
+}
+
+.down-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.taste-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 375px;
+  justify-content: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taste-container img {
+  width: 374px;
+  height: 297px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 2em;
+  transition: transform 0.3s ease;
+  display: block;
 }
 
-.read-the-docs {
-  color: #888;
+.card.hovered {
+  transform: scale(1.3);
+  border: solid 1px;  
+  z-index: 1;
+}
+
+.taste-container:hover .card:not(.hovered) {
+  filter: blur(3px);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 30px 0 30px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: lighter;
+}
+
+.card-text h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styles for Responsiveness */
+/* Medium Divices */
+@media (max-width: 1200px) {
+  body {
+    padding: 80px 100px;
+  }
+  
+  .up-section {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 90px;
+  }
+  
+  .image-container {
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+  }
+
+  .down-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .title hr {
+    width: 100%;
+  }
+
+  .taste-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .card.hovered {
+    transform: none;
+    border: none;
+  }
+
+  .taste-container:hover .card:not(.hovered) {
+    filter: none;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 800px) {
+  body {
+    padding: 60px 50px;
+  }
+
+  .image-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .text-content {
+    width: 80%;
+    align-self: center;
+  }
+
 }
