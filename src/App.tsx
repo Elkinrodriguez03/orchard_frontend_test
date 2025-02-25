@@ -6,15 +6,15 @@ import './App.css'
 
 const App: React.FC = () => {
   return (
-    <div className="dashboard-container">
-      <div className="up-section">
+    <main className="dashboard-container">
+      <section className="up-section">
         <ImageFrame />
         <CookingSection />
-      </div>
-      <div className="down-section">
+      </section>
+      <section className="down-section">
         <TasteColors />
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
 

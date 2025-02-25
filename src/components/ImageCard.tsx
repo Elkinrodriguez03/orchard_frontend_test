@@ -6,7 +6,7 @@ const ImageCard: React.FC<ImageConfig> = ({ imageSrc, altText, title, descriptio
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className={`card ${isHovered ? 'hovered' : ''}`}
+    <figure className={`card ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -15,7 +15,7 @@ const ImageCard: React.FC<ImageConfig> = ({ imageSrc, altText, title, descriptio
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-    </div>
+    </figure>
   );
 };
 
